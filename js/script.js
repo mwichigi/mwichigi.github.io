@@ -22,7 +22,7 @@ const PROJECTS = [
     tab: "havenestke",
     status: "live",
     liveUrl: "https://havennestke.ngangamj828.workers.dev/",
-    repoUrl: null, // <-- add your GitHub repo link here if you have one
+    repoUrl: "https://github.com/mwichigi/HavenNestKe",
     description: "A housing platform for the Nairobi environs, connecting landlords, tenants, and developers to available housing listings.",
     stack: ["Add your real stack here"] // <-- tell Joseph's assistant the real stack and this will be updated
   }
