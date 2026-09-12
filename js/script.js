@@ -14,11 +14,12 @@
      repoUrl     — GitHub repo link, or null
      description, stack — shown in the card
 
-   Rule: a project only gets a clickable "view live" link when
-   status is 'live' AND liveUrl is set to a real URL (not null).
-   Anything else renders as "in development" automatically —
-   so the demo never shows something that isn't actually live.
-   Only add a project once it's something you've actually built.
+   Rule: a project only gets a clickable "view live" link (and a
+   clickable title) when status is 'live' AND liveUrl is set to a
+   real URL (not null). Anything else renders as "in development"
+   automatically — so the demo never shows something that isn't
+   actually live. Only add a project once it's something you've
+   actually built.
 ------------------------------------------------------------ */
 const PROJECTS = [
   {
@@ -34,7 +35,7 @@ const PROJECTS = [
     name: "HaveNestKe",
     tab: "havenestke",
     status: "live",
-    liveUrl: "https://havennestke.ngangamj828.workers.dev/",
+    liveUrl: "https://havennestke.ngangamj828.workers.dev/login",
     repoUrl: null, // <-- add your GitHub repo link here if you have one
     description: "A housing platform for the Nairobi environs, connecting landlords, tenants, and developers to available housing listings.",
     stack: ["Add your real stack here"] // <-- tell Joseph's assistant the real stack and this will be updated
