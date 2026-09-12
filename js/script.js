@@ -25,7 +25,7 @@ const PROJECTS = [
     name: "Mawingu Market",
     tab: "mawingu-market",
     status: "live",
-    liveUrl: null,  // <-- put your real live URL here, e.g. "https://mawingumarket.com"
+    liveUrl: "https://community-smart.ngangamj828.workers.dev/",
     repoUrl: "https://github.com/mwichigi/community-smart",
     description: "A full-stack community marketplace for Nyandarua County — farmers, buyers, landlords, and service providers, with GPS-mapped listings and real-time messaging.",
     stack: ["React (Vite)", "Express.js", "PostgreSQL", "Cloudflare"]
@@ -139,6 +139,9 @@ function renderProjects(){
     const repoLink = p.repoUrl
       ? `<a href="${p.repoUrl}" target="_blank" rel="noopener">source \u2192</a>`
       : '';
+    const titleHTML = isLive
+      ? `<a class="proj-title-link" href="${p.liveUrl}" target="_blank" rel="noopener">${p.name.toUpperCase()}</a>`
+      : `${p.name.toUpperCase()}`;
     return `
       <div class="window proj-window">
         <div class="win-titlebar"><span class="tab">${p.tab}</span></div>
@@ -148,7 +151,7 @@ function renderProjects(){
               <div class="bar"><span></span><span></span><span></span></div>
               <div class="content"><div class="ln w70"></div><div class="ln w40"></div><div class="ln w90"></div></div>
             </div>
-            <div class="proj-outline-title">${p.name.toUpperCase()}</div>
+            <div class="proj-outline-title">${titleHTML}</div>
           </div>
           <div class="proj-info">
             <div class="proj-status ${statusClass}">${statusLabel}</div>
