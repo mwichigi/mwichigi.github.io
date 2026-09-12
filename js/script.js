@@ -6,20 +6,6 @@
 /* ------------------------------------------------------------
    DEMO CONFIG — this is the only place you need to edit to
    attach your real live websites (used on work.html).
-
-     name        — display name
-     tab         — short slug shown in the window title bar
-     status      — 'live' or 'dev'
-     liveUrl     — the real deployed URL, or null if not live yet
-     repoUrl     — GitHub repo link, or null
-     description, stack — shown in the card
-
-   Rule: a project only gets a clickable "view live" link (and a
-   clickable title) when status is 'live' AND liveUrl is set to a
-   real URL (not null). Anything else renders as "in development"
-   automatically — so the demo never shows something that isn't
-   actually live. Only add a project once it's something you've
-   actually built.
 ------------------------------------------------------------ */
 const PROJECTS = [
   {
@@ -35,12 +21,11 @@ const PROJECTS = [
     name: "HaveNestKe",
     tab: "havenestke",
     status: "live",
-    liveUrl: "https://havennestke.ngangamj828.workers.dev/login",
+    liveUrl: "https://havennestke.ngangamj828.workers.dev/",
     repoUrl: null, // <-- add your GitHub repo link here if you have one
     description: "A housing platform for the Nairobi environs, connecting landlords, tenants, and developers to available housing listings.",
     stack: ["Add your real stack here"] // <-- tell Joseph's assistant the real stack and this will be updated
   }
-  // Add more projects here following the same shape.
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -53,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
 });
 
-/* ---------- nav: mobile toggle + active link ---------- */
 function initNav(){
   const toggle = document.getElementById('navToggle');
   const nav = document.getElementById('topNav');
@@ -70,7 +54,6 @@ function initNav(){
   }
 }
 
-/* ---------- live clock ---------- */
 function initClock(){
   const clockEl = document.getElementById('clock');
   if(!clockEl) return;
@@ -85,7 +68,6 @@ function initClock(){
   setInterval(tick, 15000);
 }
 
-/* ---------- home page typewriter ---------- */
 function initTypewriter(){
   const typedEl = document.getElementById('typedLine');
   if(!typedEl) return;
@@ -101,7 +83,6 @@ function initTypewriter(){
   typeStep();
 }
 
-/* ---------- draggable windows ---------- */
 function initDraggableWindows(){
   document.querySelectorAll('.window.draggable .win-titlebar').forEach(bar => {
     const win = bar.closest('.window');
@@ -126,7 +107,6 @@ function initDraggableWindows(){
   });
 }
 
-/* ---------- work page: render projects from config ---------- */
 function renderProjects(){
   const grid = document.getElementById('projGrid');
   if(!grid) return;
@@ -165,7 +145,6 @@ function renderProjects(){
   }).join('');
 }
 
-/* ---------- toast helper ---------- */
 function showToast(msg){
   const toastEl = document.getElementById('toast');
   if(!toastEl) return;
@@ -175,7 +154,6 @@ function showToast(msg){
   window._toastT = setTimeout(() => toastEl.classList.remove('show'), 2800);
 }
 
-/* ---------- home page easter egg icon ---------- */
 function initEasterEgg(){
   const egg = document.getElementById('eggIcon');
   if(!egg) return;
@@ -184,14 +162,11 @@ function initEasterEgg(){
   });
 }
 
-/* ---------- contact form ---------- */
 function initContactForm(){
   const form = document.getElementById('contactForm');
   if(!form) return;
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    // TODO: wire this up to a real form backend (e.g. Formspree, EmailJS,
-    // or your own API endpoint) — this just shows a placeholder toast for now.
     showToast('Message received (demo only) \u2014 connect a form backend to make this live.');
     form.reset();
   });
