@@ -22,8 +22,8 @@
 ------------------------------------------------------------ */
 const PROJECTS = [
   {
-    name: "Mawingu Market",
-    tab: "mawingu-market",
+    name: "Smart Community Hub",
+    tab: "smart-community-hub",
     status: "live",
     liveUrl: "https://community-smart.ngangamj828.workers.dev/",
     repoUrl: "https://github.com/mwichigi/community-smart",
@@ -31,13 +31,13 @@ const PROJECTS = [
     stack: ["React (Vite)", "Express.js", "PostgreSQL", "Cloudflare"]
   },
   {
-    name: "Smart Community Hub",
-    tab: "smart-community-hub",
-    status: "dev",
-    liveUrl: null,
-    repoUrl: null,
-    description: "A parallel community platform with integrated payments — FastAPI + React, exploring M-Pesa, Stripe, and PayPal for local service transactions.",
-    stack: ["FastAPI", "React", "PostgreSQL", "Redis"]
+    name: "HaveNestKe",
+    tab: "havenestke",
+    status: "live",
+    liveUrl: "https://havennestke.ngangamj828.workers.dev/",
+    repoUrl: null, // <-- add your GitHub repo link here if you have one
+    description: "A housing platform for the Nairobi environs, connecting landlords, tenants, and developers to available housing listings.",
+    stack: ["Add your real stack here"] // <-- tell Joseph's assistant the real stack and this will be updated
   }
   // Add more projects here following the same shape.
 ];
