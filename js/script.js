@@ -12,7 +12,7 @@ const PROJECTS = [
     name: "Smart Community Hub",
     tab: "smart-community-hub",
     status: "live",
-    liveUrl: "https://community-smart.homees.workers.dev/",
+    liveUrl: "https://community-smart.ngangamj828.workers.dev/",
     repoUrl: "https://github.com/mwichigi/community-smart",
     description: "A full-stack community marketplace for Nyandarua County — farmers, buyers, landlords, and service providers, with GPS-mapped listings and real-time messaging.",
     stack: ["React (Vite)", "Express.js", "PostgreSQL", "Cloudflare"]
@@ -21,7 +21,7 @@ const PROJECTS = [
     name: "HaveNestKe",
     tab: "havenestke",
     status: "live",
-    liveUrl: "https://havennestke.ngangamj828.workers.dev/",
+    liveUrl: "https://havennestke.homees.workers.dev/",
     repoUrl: "https://github.com/mwichigi/HavenNestKe",
     description: "A housing platform for the Nairobi environs, connecting landlords, tenants, and developers to available housing listings.",
     stack: ["Add your real stack here"] // <-- tell Joseph's assistant the real stack and this will be updated
