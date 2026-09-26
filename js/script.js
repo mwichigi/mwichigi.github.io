@@ -12,7 +12,7 @@ const PROJECTS = [
     name: "Smart Community Hub",
     tab: "smart-community-hub",
     status: "live",
-    liveUrl: "https://community-smart.ngangamj828.workers.dev/",
+    liveUrl: "https://community-smart.homees.workers.dev/",
     repoUrl: "https://github.com/mwichigi/community-smart",
     description: "A full-stack community marketplace for Nyandarua County — farmers, buyers, landlords, and service providers, with GPS-mapped listings and real-time messaging.",
     stack: ["React (Vite)", "Express.js", "PostgreSQL", "Cloudflare"]
